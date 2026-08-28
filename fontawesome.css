@@ -1,0 +1,48 @@
+/* Font Awesome 6.4.0 - Self-hosted subset */
+/* Only includes icons used in the project */
+
+@font-face {
+  font-family: 'Font Awesome 6 Solid';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('fonts/fontawesome/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('fonts/fontawesome/fa-regular-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('fonts/fontawesome/fa-brands-400.woff2') format('woff2');
+}
+
+.fa-solid, .fas { font-family: 'Font Awesome 6 Solid'; font-weight: 900; display: inline-block; font-style: normal; font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.fa-regular, .far { font-family: 'Font Awesome 6 Regular'; font-weight: 400; display: inline-block; font-style: normal; font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.fa-brands, .fab { font-family: 'Font Awesome 6 Brands'; font-weight: 400; display: inline-block; font-style: normal; font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Icons used in project */
+.fa-star::before { content: "\f005"; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-heart::before { content: "\f004"; }
+.fa-crown::before { content: "\f521"; }
+.fa-ring::before { content: "\f70b"; }
+.fa-wand-magic::before { content: "\f0d0"; }
+.fa-pen-to-square::before { content: "\f044"; }
+.fa-chevron-right::before { content: "\f054"; }
+.fa-whatsapp::before { content: "\f232"; }
+.fa-instagram::before { content: "\f16d"; }
+.fa-tiktok::before { content: "\e07b"; }
+.fa-location-dot::before { content: "\f3c5"; }
+.fa-envelope::before { content: "\f0e0"; }
+
+/* Utilities */
+.fa { display: inline-block; font-style: normal; font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; }

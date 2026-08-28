@@ -1,0 +1,96 @@
+/* ========================================
+   BIOSITE STYLES — Maquiadora Sue (biosite.html)
+   ======================================== */
+
+body { display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+
+.biosite-container { width: 100%; max-width: 450px; text-align: center; }
+
+/* Perfil */
+.profile-frame {
+  width: 110px; height: 110px; border-radius: 50%;
+  margin: 0 auto 20px auto; border: 1px solid var(--border-soft);
+  overflow: hidden; position: relative;
+}
+.profile-frame img { 
+  width: 100%; height: 100%; object-fit: cover; object-position: center 25%; 
+  animation: profileZoom 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes profileZoom {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+.profile-name { font-size: 26px; letter-spacing: 1px; margin-bottom: 8px; }
+.profile-bio { font-size: 14px; color: var(--text-muted); font-weight: 300; margin-bottom: 24px; padding: 0 20px; line-height: 1.5; }
+
+/* Jornada Card */
+.jornada-card {
+  background-color: var(--white); border: 1px solid var(--border-soft);
+  padding: 24px; margin-bottom: 30px; text-align: left; border-radius: var(--radius);
+}
+.jornada-card h2 {
+  font-family: 'Playfair Display', serif; font-size: 16px;
+  text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold-text);
+  margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+}
+.jornada-card p { font-size: 13.5px; color: var(--text-dark); line-height: 1.6; font-weight: 300; }
+
+/* Links */
+.links-wrapper { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+
+.btn-link {
+  display: flex; align-items: center; justify-content: space-between;
+  background-color: var(--white); border: 1px solid var(--border-soft);
+  padding: 18px 24px; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.5px; color: var(--text-dark);
+  transition: all var(--transition); border-radius: var(--radius); text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.btn-link::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: var(--gold-accent);
+  transform: scaleY(0);
+  transition: transform var(--transition);
+}
+.btn-link:hover::before {
+  transform: scaleY(1);
+}
+.btn-link i:first-child { font-size: 16px; color: var(--gold-accent); width: 24px; text-align: left; flex-shrink: 0; }
+.btn-link .link-text { flex: 1; margin: 0 16px; }
+.btn-link .arrow-icon { font-size: 12px; color: #CCCCCC; transition: transform var(--transition); flex-shrink: 0; }
+
+.btn-link:hover { 
+  border-color: var(--border-soft); 
+  transform: translateY(-3px); 
+  box-shadow: var(--shadow-luxury); 
+  padding-left: 28px;
+}
+.btn-link:hover .arrow-icon { transform: translateX(4px); color: var(--gold-accent); }
+
+.btn-link.featured { 
+  background-color: var(--text-dark); 
+  color: var(--white); 
+  border-color: var(--text-dark); 
+  box-shadow: 0 4px 15px rgba(28,28,28,0.15); 
+}
+.btn-link.featured::before {
+  background: var(--white);
+}
+.btn-link.featured:hover { 
+  background-color: var(--gold-accent); 
+  border-color: var(--gold-accent); 
+  box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
+}
+.btn-link.featured:hover i:first-child { color: var(--white); }
+
+/* Footer */
+.biosite-footer { margin-top: 20px; }
+.social-icons { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
+.social-icons a { font-size: 20px; color: var(--text-dark); transition: all var(--transition); display: inline-block; }
+.social-icons a:hover { color: var(--gold-accent); transform: scale(1.2); }
+.footer-text { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #767676; }
