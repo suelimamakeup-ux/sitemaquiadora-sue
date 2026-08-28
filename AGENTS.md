@@ -14,7 +14,7 @@ Static HTML/CSS website for a makeup artist (Maquiadora Sue). No build tools, no
 
 ## Key Facts
 - **Language:** Portuguese (Brazil)
-- **Domain:** maquiadorasue.com.br
+- **Domain:** maquiadorasue.com
 - **WhatsApp:** +55-21-99542-1808 (all CTAs link here)
 - **Fonts:** Lato + Playfair Display (Google Fonts)
 - **Icons:** FontAwesome 6.4.0 (CDN in site, self-hosted in biosite)
