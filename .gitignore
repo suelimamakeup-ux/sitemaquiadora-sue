@@ -33,6 +33,8 @@ Shooting.jpeg
 # Artefatos de auditoria (venv isolado)
 docs/security-audit/.venv/
 docs/security-audit/_*.png
+# Exceção: relatório de auditoria deve ser versionado
+!docs/security-audit/relatorio-auditoria-seguranca.pdf
 
 # Arquivos vazios/gerados
 gemini-code-*.html
