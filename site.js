@@ -1,4 +1,18 @@
 (function() {
+  // Header Glassmorphism on Scroll
+  const header = document.querySelector('header');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   // Mobile Menu Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -93,26 +107,62 @@
     });
   }
 
+  // Portfolio Carousel & Progress Bar
   const pTrack = document.querySelector('.portfolio-grid');
   const pPrevBtn = document.querySelector('.portfolio-carousel-btn.prev');
   const pNextBtn = document.querySelector('.portfolio-carousel-btn.next');
-  if (pTrack && pPrevBtn && pNextBtn) {
-    pPrevBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const firstItem = pTrack.querySelector('.portfolio-item:not(.hidden)');
-      if (firstItem) {
-        const itemWidth = firstItem.offsetWidth + 20;
-        pTrack.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+  let progressBarFill = null;
+
+  if (pTrack) {
+    // Cria barra de progresso automaticamente se não existir no DOM
+    const carouselWrapper = document.querySelector('.portfolio-carousel-wrapper');
+    if (carouselWrapper && !carouselWrapper.querySelector('.portfolio-progress-bar')) {
+      const pBar = document.createElement('div');
+      pBar.className = 'portfolio-progress-bar';
+      pBar.setAttribute('aria-hidden', 'true');
+      progressBarFill = document.createElement('div');
+      progressBarFill.className = 'portfolio-progress-fill';
+      pBar.appendChild(progressBarFill);
+      carouselWrapper.appendChild(pBar);
+    }
+
+    const updatePortfolioProgress = () => {
+      if (!progressBarFill) return;
+      const maxScroll = pTrack.scrollWidth - pTrack.clientWidth;
+      if (maxScroll <= 0) {
+        progressBarFill.style.width = '100%';
+        progressBarFill.style.transform = 'translateX(0)';
+      } else {
+        const progress = Math.min(1, Math.max(0, pTrack.scrollLeft / maxScroll));
+        const visibleRatio = Math.max(0.15, pTrack.clientWidth / pTrack.scrollWidth);
+        progressBarFill.style.width = `${visibleRatio * 100}%`;
+        const moveRange = 100 - (visibleRatio * 100);
+        progressBarFill.style.transform = `translateX(${progress * (pTrack.clientWidth - (pTrack.clientWidth * visibleRatio))}px)`;
       }
-    });
-    pNextBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const firstItem = pTrack.querySelector('.portfolio-item:not(.hidden)');
-      if (firstItem) {
-        const itemWidth = firstItem.offsetWidth + 20;
-        pTrack.scrollBy({ left: itemWidth, behavior: 'smooth' });
-      }
-    });
+    };
+
+    pTrack.addEventListener('scroll', updatePortfolioProgress, { passive: true });
+    window.addEventListener('resize', updatePortfolioProgress, { passive: true });
+    setTimeout(updatePortfolioProgress, 100);
+
+    if (pPrevBtn && pNextBtn) {
+      pPrevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const firstItem = pTrack.querySelector('.portfolio-item:not(.hidden)');
+        if (firstItem) {
+          const itemWidth = firstItem.offsetWidth + 20;
+          pTrack.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        }
+      });
+      pNextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const firstItem = pTrack.querySelector('.portfolio-item:not(.hidden)');
+        if (firstItem) {
+          const itemWidth = firstItem.offsetWidth + 20;
+          pTrack.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        }
+      });
+    }
   }
 
   lightboxClose?.addEventListener('click', closeLightbox);
@@ -143,16 +193,86 @@
       });
 
       visibleItems = allPortfolioItems.filter(item => !item.classList.contains('hidden'));
+      if (pTrack) {
+        pTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(() => {
+          const evt = new Event('scroll');
+          pTrack.dispatchEvent(evt);
+        }, 150);
+      }
     });
   });
 
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherQ = otherItem.querySelector('.faq-question');
+          if (otherQ) otherQ.setAttribute('aria-expanded', 'false');
+        }
+      });
+      item.classList.toggle('active');
+      question.setAttribute('aria-expanded', !isActive);
+    });
+  });
+
+  // Scroll Spy
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  const sections = document.querySelectorAll('main section[id]');
+  if (navLinks.length && sections.length) {
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.setAttribute('aria-current', 'page');
+            } else if (link.getAttribute('href')?.startsWith('#')) {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(sec => spyObserver.observe(sec));
+  }
+
+  // Staggered Reveal Animations (Details Vault style)
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.section-header, .step-card, .pillar-card, .portfolio-item, .credentials-content, .hero-text, .testimonial-card').forEach(el => {
+  // Agrupa cards em containers para aplicar delays progressivos
+  const containerGroups = [
+    '.experience-timeline',
+    '.pillars-grid',
+    '.testimonials-grid',
+    '.credentials-badges'
+  ];
+
+  containerGroups.forEach(groupSelector => {
+    const group = document.querySelector(groupSelector);
+    if (group) {
+      const children = Array.from(group.children);
+      children.forEach((child, index) => {
+        child.classList.add('reveal', `reveal-delay-${Math.min(5, (index % 5) + 1)}`);
+        revealObserver.observe(child);
+      });
+    }
+  });
+
+  document.querySelectorAll('.section-header, .credentials-content, .hero-text, .hero-image-frame, .credentials-image, .faq-item').forEach(el => {
     el.classList.add('reveal');
     revealObserver.observe(el);
   });

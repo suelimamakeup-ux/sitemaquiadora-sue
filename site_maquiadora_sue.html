@@ -81,6 +81,56 @@
   }
   </script>
 
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Com quanto tempo de antecedência devo reservar a data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomendamos agendar com 6 a 12 meses de antecedência. Como trabalhamos com exclusividade de data — atendendo apenas uma noiva por dia para garantir dedicação integral —, as datas em períodos mais concorridos costumam esgotar rapidamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a Prévia da Noiva e quando ela é feita?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A prévia é realizada entre 30 e 15 dias antes do casamento. Testamos minuciosamente o cabelo e a maquiagem desejados, alinhando com as referências do vestido, véu, grinalda e estilo da cerimônia, para que você suba ao altar com segurança absoluta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O atendimento é realizado no local do evento, hotel ou domicílio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Levamos toda a bancada profissional, materiais esterilizados, iluminação técnica e biossegurança até o local escolhido por você no Rio de Janeiro, Região Serrana, Região dos Lagos ou em Destination Weddings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é a técnica de Pele Blindada e quanto tempo ela dura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É uma metodologia avançada de preparação, hidratação e selagem da cútis com produtos importados de alta performance. Ela garante acabamento impecável, sofisticado e resistente a lágrimas, calor, abraços e suor por mais de 16 horas sem craquelar ou transferir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais marcas e linhas de produtos são utilizadas na produção?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilizamos exclusivamente marcas de prestígio internacional, hipoalergênicas e dermatologicamente testadas, como Dior, MAC, Make Up For Ever, Charlotte Tilbury, NARS, Kryolan e Atelier Paris, assegurando alta fixação e conforto na pele."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Analytics 4 (substituir G-XXXXXXXXXX pelo ID real do GA4) -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -125,14 +175,14 @@
           <li><a href="#sobre">A Profissional</a></li>
           <li><a href="#experiencia">A Experiência</a></li>
           <li><a href="#servicos">Especialidades</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
-        <div class="lang-selector">
-          <a href="#" class="active">PT</a>
-          <span class="lang-divider">|</span>
-          <a href="site_maquiadora_sue_en.html">EN</a>
-        </div>
+        <a href="site_maquiadora_sue_en.html" class="lang-switch" aria-label="English version" title="English">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i> EN
+        </a>
         <a href="https://wa.me/5521995421808?text=Olá%20Sue!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20maquiagem%20e%20penteado." target="_blank" rel="noopener noreferrer" class="btn-cta-nav" aria-label="Solicitar orçamento via WhatsApp">Orçamento</a>
       </div>
       <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
@@ -153,7 +203,7 @@
           </a>
         </div>
         <figure class="hero-image-frame">
-          <img src="capa_noiva.webp" alt="Noiva com maquiagem e penteado assinados por Sue Lima" loading="eager">
+          <img src="capa_noiva.webp" alt="Noiva com maquiagem e penteado assinados por Sue Lima" width="600" height="750" loading="eager">
           <figcaption class="visually-hidden">Noiva maquiada por Sue Lima</figcaption>
         </figure>
       </div>
@@ -162,7 +212,7 @@
     <section id="sobre" class="credentials-section" aria-labelledby="sobre-title">
       <div class="container credentials-grid">
         <figure class="credentials-image">
-          <img src="Nova_Foto_Perfil.webp" alt="Sue Lima, maquiadora especialista em noivas e debutantes" loading="lazy">
+          <img src="Nova_Foto_Perfil.webp" alt="Sue Lima, maquiadora especialista em noivas e debutantes" width="550" height="650" loading="lazy">
           <figcaption class="visually-hidden">Sue Lima, maquiadora profissional</figcaption>
         </figure>
         <div class="credentials-content">
@@ -172,6 +222,37 @@
             "Maquiar é sobre cuidar, acolher e ressaltar a essência de cada mulher, gerando profundo bem-estar."
           </blockquote>
           <p>Com formação internacional de prestígio na prestigiada escola <strong>Make Up For Ever em Nova York</strong>, especializei-me em técnicas de alta durabilidade e pele blindada, estudando com os maiores nomes do mercado (como Thais Benites e Sonia Lopes) para oferecer segurança total às minhas clientes.</p>
+
+          <div class="credentials-badges">
+            <div class="badge-item">
+              <i class="fa-solid fa-tv" aria-hidden="true"></i>
+              <div>
+                <h4>5+ Anos Fox Sports</h4>
+                <p>Equipe oficial de maquiagem para TV ao vivo.</p>
+              </div>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <div>
+                <h4>Formação MUFE NY</h4>
+                <p>Make Up For Ever Academy em Nova York.</p>
+              </div>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              <div>
+                <h4>Pele Blindada</h4>
+                <p>Técnica resistente a lágrimas, calor e suor.</p>
+              </div>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              <div>
+                <h4>Exclusividade Total</h4>
+                <p>Dedicação integral a apenas um evento por dia.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -238,7 +319,7 @@
       </div>
     </section>
 
-    <section class="portfolio-section" aria-labelledby="portfolio-title">
+    <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
       <div class="container">
         <header class="section-header">
           <h2 id="portfolio-title">Galeria & portfólio</h2>
@@ -437,6 +518,63 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="faq-title">Perguntas Frequentes</h2>
+          <p>Tudo o que você precisa saber para planejar sua produção com total tranquilidade e segurança.</p>
+        </header>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Com quanto tempo de antecedência devo reservar a data?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Recomendamos agendar com 6 a 12 meses de antecedência. Como trabalhamos com exclusividade de data — atendendo apenas uma noiva por dia para garantir dedicação integral —, as datas em períodos mais concorridos costumam esgotar rapidamente.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona a Prévia da Noiva e quando ela é feita?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>A prévia é realizada entre 30 e 15 dias antes do casamento. Testamos minuciosamente o cabelo e a maquiagem desejados, alinhando com as referências do vestido, véu, grinalda e estilo da cerimônia, para que você suba ao altar com segurança absoluta.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>O atendimento é realizado no local do evento, hotel ou domicílio?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sim! Levamos toda a bancada profissional, materiais esterilizados, iluminação técnica e biossegurança até o local escolhido por você no Rio de Janeiro, Região Serrana, Região dos Lagos ou em Destination Weddings.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>O que é a técnica de Pele Blindada e quanto tempo ela dura?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>É uma metodologia avançada de preparação, hidratação e selagem da cútis com produtos importados de alta performance. Ela garante acabamento impecável, sofisticado e resistente a lágrimas, calor, abraços e suor por mais de 16 horas sem craquelar ou transferir.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais marcas e linhas de produtos são utilizadas na produção?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Utilizamos exclusivamente marcas de prestígio internacional, hipoalergênicas e dermatologicamente testadas, como Dior, MAC, Make Up For Ever, Charlotte Tilbury, NARS, Kryolan e Atelier Paris, assegurando alta fixação e conforto na pele.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="action-banner" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title">Vamos planejar o seu dia inesquecível?</h2>
@@ -485,6 +623,7 @@
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/5521995421808?text=Olá%20Sue!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20agendar%20um%20atendimento." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+    <span class="whatsapp-tooltip">Atendimento online • Fale com a Sue</span>
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 

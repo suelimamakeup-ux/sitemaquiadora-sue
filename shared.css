@@ -5,19 +5,19 @@
 :root {
   --bg-luxury: #FDFBF9;
   --text-dark: #1C1C1C;
-  --gold-accent: #C5A059; /* More elegant, champagne gold */
-  --gold-hover: #A8843F;
+  --gold-accent: #D4AF37; /* Gold oficial da marca */
+  --gold-hover: #BF9B2D;
   --gold-text: #8C6A2E;
   --text-muted: #555555;
   --white: #FFFFFF;
   --border-soft: #EFEBE4;
   --shadow-subtle: 0 12px 35px rgba(28,28,28,0.02);
-  --shadow-hover: 0 30px 60px rgba(197,160,89,0.08);
+  --shadow-hover: 0 30px 60px rgba(212,175,55,0.08);
   --shadow-luxury: 0 20px 50px rgba(28,28,28,0.04);
-  --radius: 0px; /* Sharp corners for editorial fashion branding */
+  --radius: 4px; /* Suave refinamento editorial conforme DESIGN.md */
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --container-max: 1160px;
-  --container-pad: 30px;
+  --container-pad: 32px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -59,12 +59,19 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Buttons */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: 'Lato', sans-serif;
   font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
-  font-size: 11px; padding: 16px 36px; border: none; cursor: pointer;
+  font-size: 11px; padding: 16px 32px; border: none; cursor: pointer;
   transition: all var(--transition); border-radius: var(--radius);
   position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active {
+  transform: scale(0.97) translateY(0) !important;
+  transition: transform 0.1s ease !important;
 }
 
 .btn--primary {
@@ -74,17 +81,43 @@ img { max-width: 100%; height: auto; display: block; }
   background-color: var(--gold-accent); 
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
 }
 
 .btn--gold {
   background-color: var(--gold-accent); color: var(--white);
-  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.15);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.16);
+  position: relative;
+}
+.btn--gold::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 80%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shimmerCTA 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
 }
 .btn--gold:hover { 
   background-color: var(--gold-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.28);
+}
+.btn--gold:hover::after {
+  animation: shimmerCTA 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes shimmerCTA {
+  0% { left: -150%; }
+  30%, 100% { left: 160%; }
 }
 
 .btn--outline {
@@ -92,6 +125,9 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0 0 4px; font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.btn--outline:active {
+  transform: scale(0.97) !important;
 }
 .btn--outline:hover { 
   color: var(--gold-accent); 

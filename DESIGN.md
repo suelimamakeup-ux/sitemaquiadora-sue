@@ -57,6 +57,14 @@ components:
     textColor: "{colors.danger}"
     rounded: "{rounded.sm}"
     padding: "{spacing.md}"
+  badge:
+    backgroundColor: "{colors.surface}"
+    borderColor: "#EFEBE4"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.md}"
+  accordion:
+    borderColor: "#EFEBE4"
+    padding: "{spacing.md} 0"
 ---
 
 ## Overview

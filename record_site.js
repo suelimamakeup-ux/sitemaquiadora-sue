@@ -22,10 +22,16 @@ const path = require('path');
   await page.hover('.btn-luxury-cta');
   await page.waitForTimeout(1500);
 
-  // 3. Scroll suave até "A Profissional"
-  console.log('Cena 3: A Profissional');
+  // 3. Scroll suave até "A Profissional" e marcos de autoridade
+  console.log('Cena 3: A Profissional e Credenciais');
   await page.locator('#sobre').scrollIntoViewIfNeeded();
-  await page.waitForTimeout(2500);
+  await page.waitForTimeout(1500);
+  const badges = await page.locator('.badge-item').all();
+  for (let i = 0; i < badges.length; i++) {
+    await badges[i].hover();
+    await page.waitForTimeout(800);
+  }
+  await page.waitForTimeout(1000);
 
   // 4. Scroll até "A Experiência"
   console.log('Cena 4: A Experiência');
@@ -90,32 +96,48 @@ const path = require('path');
     await page.waitForTimeout(1500);
   }
 
-  // 15. Scroll até CTA Final
-  console.log('Cena 10: CTA Final');
+  // 15. Scroll até Perguntas Frequentes (FAQ)
+  console.log('Cena 10: FAQ Accordion');
+  await page.locator('#faq').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(1500);
+  const faqQuestions = await page.locator('.faq-question').all();
+  if (faqQuestions.length > 0) {
+    await faqQuestions[0].click();
+    await page.waitForTimeout(2000);
+    if (faqQuestions.length > 1) {
+      await faqQuestions[1].click();
+      await page.waitForTimeout(2000);
+    }
+  }
+
+  // 16. Scroll até CTA Final
+  console.log('Cena 11: CTA Final');
   await page.locator('.action-banner').scrollIntoViewIfNeeded();
   await page.waitForTimeout(2000);
 
-  // 16. Hover no botão final
+  // 17. Hover no botão final
   await page.hover('.action-banner .btn-luxury-cta');
   await page.waitForTimeout(1500);
 
-  // 17. Mostra WhatsApp flutuante
-  console.log('Cena 11: WhatsApp Float');
+  // 18. Mostra WhatsApp flutuante com tooltip
+  console.log('Cena 12: WhatsApp Float com Tooltip');
   await page.hover('.whatsapp-float');
-  await page.waitForTimeout(1500);
+  await page.waitForTimeout(2000);
 
-  // 18. Scroll até o footer
-  console.log('Cena 12: Footer');
+  // 19. Scroll até o footer
+  console.log('Cena 13: Footer');
   await page.locator('footer').scrollIntoViewIfNeeded();
   await page.waitForTimeout(2000);
 
-  // 19. Volta ao topo
-  console.log('Cena 13: Volta ao topo');
+  // 20. Volta ao topo e mostra seletor de idioma minimalista
+  console.log('Cena 14: Volta ao topo e Seletor de Idioma');
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(1500);
+  await page.hover('.lang-switch');
+  await page.waitForTimeout(1500);
 
-  // 20. Demonstração do menu mobile
-  console.log('Cena 14: Menu Mobile');
+  // 21. Demonstração do menu mobile
+  console.log('Cena 15: Menu Mobile');
   await page.setViewportSize({ width: 375, height: 812 });
   await page.waitForTimeout(1000);
   await page.click('.nav-toggle');
@@ -123,12 +145,18 @@ const path = require('path');
   await page.click('.nav-toggle');
   await page.waitForTimeout(1000);
 
-  // 21. Volta para desktop
-  await page.setViewportSize({ width: 1920, height: 1080 });
-  await page.waitForTimeout(1000);
+  // 22. Demonstração do Biosite (Link na Bio)
+  console.log('Cena 16: Biosite (Instagram)');
+  await page.setViewportSize({ width: 400, height: 850 });
+  const biositePath = path.join(__dirname, 'biosite.html');
+  await page.goto(`file:///${biositePath.replace(/\\/g, '/')}`);
+  await page.waitForTimeout(2500);
+  await page.hover('.btn-link.featured');
+  await page.waitForTimeout(2000);
+  await page.evaluate(() => window.scrollTo({ top: 300, behavior: 'smooth' }));
+  await page.waitForTimeout(2500);
 
-  console.log('Gravação concluída!');
-  console.log('Use OBS Studio para gravar a janela do navegador.');
+  console.log('Gravação e demonstração concluídas com sucesso!');
 
   await browser.close();
 })();

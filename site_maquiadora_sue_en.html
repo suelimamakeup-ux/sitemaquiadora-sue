@@ -81,6 +81,56 @@
   }
   </script>
 
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book my wedding date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend booking 6 to 12 months in advance. To guarantee undivided dedication, we exclusively accept one bride per date, which means prime wedding season dates fill quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Bridal Beauty Preview work and when takes place?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The preview is held 15 to 30 days before your wedding day. We fully test your chosen makeup and hair, ensuring complete harmony with your dress, veil, accessories, and venue lighting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide on-location services at hotels, venues or private villas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We bring a complete professional studio setup—including calibrated vanity lighting, sterile hygiene protocols, and luxury products—directly to your location in Rio de Janeiro or for Destination Weddings abroad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Shielded Skin technique and how long does it last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is an advanced skin preparation and sealing methodology tailored for tropical and coastal climates. It provides high resistance to heat, humidity, tears, and hugs, keeping your makeup impeccable for 16+ hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which luxury makeup and haircare brands do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work exclusively with dermatologically tested, high-performance luxury brands including Dior, MAC, Make Up For Ever, Charlotte Tilbury, NARS, Kryolan, and Atelier Paris."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Analytics 4 (replace G-XXXXXXXXXX with real GA4 ID) -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -125,14 +175,14 @@
           <li><a href="#sobre">The Artist</a></li>
           <li><a href="#experiencia">The Experience</a></li>
           <li><a href="#servicos">Specialties</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
-        <div class="lang-selector">
-          <a href="site_maquiadora_sue.html">PT</a>
-          <span class="lang-divider">|</span>
-          <a href="#" class="active">EN</a>
-        </div>
+        <a href="site_maquiadora_sue.html" class="lang-switch" aria-label="Versão em português" title="Português">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i> PT
+        </a>
         <a href="https://wa.me/5521995421808?text=Hello%20Sue!%20I%20would%20like%20to%20request%20an%20inquiry%20for%20bridal%20makeup%20and%20hair." target="_blank" rel="noopener noreferrer" class="btn-cta-nav" aria-label="Request inquiry via WhatsApp">Inquiry</a>
       </div>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
@@ -153,7 +203,7 @@
           </a>
         </div>
         <figure class="hero-image-frame">
-          <img src="capa_noiva.webp" alt="Bride with makeup and hair signed by Sue Lima" loading="eager">
+          <img src="capa_noiva.webp" alt="Bride with makeup and hair signed by Sue Lima" width="600" height="750" loading="eager">
           <figcaption class="visually-hidden">Bride made up by Sue Lima</figcaption>
         </figure>
       </div>
@@ -162,7 +212,7 @@
     <section id="sobre" class="credentials-section" aria-labelledby="about-title">
       <div class="container credentials-grid">
         <figure class="credentials-image">
-          <img src="sue_lima_perfil.webp" alt="Sue Lima, professional makeup artist" loading="lazy">
+          <img src="sue_lima_perfil.webp" alt="Sue Lima, professional makeup artist" width="550" height="650" loading="lazy">
           <figcaption class="visually-hidden">Sue Lima Portrait</figcaption>
         </figure>
         <div class="credentials-content">
@@ -171,21 +221,34 @@
           <p>Crafting luxury beauty since 2015, Sue Lima has built a distinguished career, including 5 years as a key member of the official characterization and makeup team at Fox Sports TV. Her expertise is backed by international training at the prestigious Make Up For Ever Academy in New York, specializing in high-durability techniques for major events.</p>
           <blockquote class="signature-quote">"Your beauty is unique. My mission is to translate your essence into a sophisticated, timeless look with an impeccable finish, making you feel your most extraordinary self."</blockquote>
           
-          <div class="badges-grid">
+          <div class="credentials-badges">
             <div class="badge-item">
               <i class="fa-solid fa-tv" aria-hidden="true"></i>
-              <h4>Fox Sports Experience</h4>
-              <p>5+ years of live TV productions.</p>
+              <div>
+                <h4>5+ Years Live TV</h4>
+                <p>Official Fox Sports makeup and characterization.</p>
+              </div>
             </div>
             <div class="badge-item">
               <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-              <h4>International Training</h4>
-              <p>Specialization by MUFE in New York.</p>
+              <div>
+                <h4>MUFE New York</h4>
+                <p>Trained at Make Up For Ever Academy NY.</p>
+              </div>
             </div>
             <div class="badge-item">
               <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-              <h4>Premium Shielded Skin</h4>
-              <p>Exclusive long-lasting techniques.</p>
+              <div>
+                <h4>Shielded Skin</h4>
+                <p>16h+ sweat, heat and tear-proof durability.</p>
+              </div>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              <div>
+                <h4>Single Date Booking</h4>
+                <p>Full-day exclusivity dedicated solely to you.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -255,7 +318,7 @@
       </div>
     </section>
 
-    <section class="portfolio-section" aria-labelledby="portfolio-title">
+    <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
       <div class="container">
         <header class="section-header">
           <h2 id="portfolio-title">Gallery & Portfolio</h2>
@@ -454,6 +517,63 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="faq-title">Frequently Asked Questions</h2>
+          <p>Everything you need to know to plan your bespoke bridal beauty experience with complete peace of mind.</p>
+        </header>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How far in advance should I book my wedding date?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We recommend booking 6 to 12 months in advance. To guarantee undivided dedication, we exclusively accept one bride per date, which means prime wedding season dates fill quickly.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the Bridal Beauty Preview work and when takes place?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>The preview is held 15 to 30 days before your wedding day. We fully test your chosen makeup and hair, ensuring complete harmony with your dress, veil, accessories, and venue lighting.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide on-location services at hotels, venues or private villas?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We bring a complete professional studio setup—including calibrated vanity lighting, sterile hygiene protocols, and luxury products—directly to your location in Rio de Janeiro or for Destination Weddings abroad.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the Shielded Skin technique and how long does it last?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>It is an advanced skin preparation and sealing methodology tailored for tropical and coastal climates. It provides high resistance to heat, humidity, tears, and hugs, keeping your makeup impeccable for 16+ hours.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which luxury makeup and haircare brands do you use?</span>
+              <i class="fa-solid fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We work exclusively with dermatologically tested, high-performance luxury brands including Dior, MAC, Make Up For Ever, Charlotte Tilbury, NARS, Kryolan, and Atelier Paris.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="action-banner" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title">Let's plan your unforgettable day?</h2>
@@ -502,6 +622,7 @@
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/5521995421808?text=Hello%20Sue!%20I%20am%20visiting%20your%20website%20and%20would%20like%20to%20book%20a%20consultation." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Open conversation on WhatsApp">
+    <span class="whatsapp-tooltip">Online booking • Chat with Sue</span>
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
