@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Página Principal (Português - Brasil) -->
+  <url>
+    <loc>https://www.maquiadorasue.com/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.maquiadorasue.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maquiadorasue.com/site_maquiadora_sue_en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maquiadorasue.com/" />
+    <image:image>
+      <image:loc>https://www.maquiadorasue.com/capa_noiva.webp</image:loc>
+      <image:title>Maquiadora Sue - Alta Maquiagem e Penteado de Noivas</image:title>
+      <image:caption>Dia da Noiva de luxo e beleza personalizada no Rio de Janeiro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.maquiadorasue.com/Nova_Foto_Perfil.webp</image:loc>
+      <image:title>Sue Lima - Maquiadora Profissional</image:title>
+      <image:caption>Especialista em pele blindada e atendimento de luxo</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Versão em Inglês (International Visitors) -->
+  <url>
+    <loc>https://www.maquiadorasue.com/site_maquiadora_sue_en.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.maquiadorasue.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maquiadorasue.com/site_maquiadora_sue_en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maquiadorasue.com/" />
+  </url>
+
+  <!-- Biosite / Link na Bio (Instagram & TikTok) -->
+  <url>
+    <loc>https://www.maquiadorasue.com/biosite.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

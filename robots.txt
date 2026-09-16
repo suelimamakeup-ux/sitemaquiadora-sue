@@ -1,0 +1,10 @@
+# robots.txt — Maquiadora Sue (https://www.maquiadorasue.com)
+User-agent: *
+Allow: /
+Disallow: /docs/
+Disallow: /private/
+Disallow: /*.bak$
+Disallow: /*.pdf$
+
+# Sitemap
+Sitemap: https://www.maquiadorasue.com/sitemap.xml
