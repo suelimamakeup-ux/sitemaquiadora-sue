@@ -17,20 +17,18 @@
 
 ---
 
-## 2. Storyboard + Narração
+## 2. Storyboard + Narração (Versão Atualizada com Efeitos de Luxo)
 
-| Tempo | Cena / Ação na Tela | Narração (Voiceover) | Notas de Gravação |
-|-------|---------------------|----------------------|-------------------|
-| **0:00–0:06** | **Hero** — Página carrega. Scroll leve para mostrar imagem da noiva. Mouse passa sobre botão "Iniciar Atendimento" (hover). | "Maquiadora Sue — Alta Maquiagem e Penteado para Noivas, Debutantes e Grandes Ocasiões no Rio de Janeiro." | Grave 2 takes: um com scroll suave, outro direto no botão. |
-| **0:06–0:14** | **Navegação** — Clique no logo (volta ao topo). Mostre menu desktop. Redimensione janela para < 992px → menu vira hambúrguer. Abra/feche menu mobile. | "Navegação limpa, responsiva. No mobile, menu hambúrguer com animação suave." | Use DevTools (F12) device toolbar para mobile. |
-| **0:14–0:22** | **Seção "A Profissional"** — Scroll até a foto da Sue. Pause 2s. Destaque quote dourado. | "Mais de 10 anos de experiência. 5 anos na equipe de caracterização do Fox Sports. Formação Make Up For Ever em Nova York." | Scroll suave (mouse wheel devagar ou teclado ↓). |
-| **0:22–0:32** | **Seção "A Experiência"** — Mostre os 3 cards (01, 02, 03). Passe mouse sobre cada um (sem hover effect, mas mostra número Playfair). | "Processo em 3 etapas: Planejamento, Prévia de Beleza, e o Grande Dia — com assessoria completa." | Pausa 1s em cada card. |
-| **0:32–0:42** | **Seção "Especialidades"** — Mostre 3 pilares: Noivas, Debutantes, Produção Social. Clique em "Conhecer Pacotes" (abre WhatsApp em nova aba → feche aba). | "Três especialidades: Noivas com pacotes exclusivos, Debutantes com troca de looks, e Produção Social para madrinhas e convidadas." | Clique real no botão → mostra integração WhatsApp. |
-| **0:42–0:55** | **Portfólio** — Scroll na galeria. Clique na 1ª foto → **Lightbox abre**. Navegue: seta direita, seta esquerda, tecla ESC, clique no overlay. Feche. | "Galeria com lightbox nativo — navegação por setas, teclado, swipe no mobile. Imagens em alta resolução." | Demonstre todas as formas de fechar. |
-| **0:55–1:05** | **Depoimentos** — Mostre 3 cards. Scroll devagar. | "Prova social: noivas e debutantes reais que confiaram no trabalho da Sue." | Pausa 2s por card para leitura. |
-| **1:05–1:12** | **CTA Final + WhatsApp Flutuante** — Scroll até banner final. Mostre botão "Conversar no WhatsApp". Aponte para botão flutuante (pulse animation). | "Dois caminhos diretos pro WhatsApp: botão fixo no rodapé e flutuante sempre visível." | Mostre hover no botão flutuante (scale 1.1). |
-| **1:12–1:18** | **Footer** — Scroll até o fim. Mostre contatos, redes sociais, copyright. | "Contato direto: WhatsApp, e-mail, localização. Instagram e TikTok ativos." | Fim suave. |
-| **1:18–1:20** | **Fade to black** + texto na tela: `maquiadorasue.com.br` / `@maquiadorasue` | — | Adicione na edição. |
+| Tempo | Cena / Ação na Tela | Narração (Voiceover) | Destaque Técnico / Visual |
+|-------|---------------------|----------------------|---------------------------|
+| **0:00–0:08** | **Hero & Text Reveal** — Página carrega. Título surge com efeito máscara (*Text Mask Reveal*). Reflexo de luz dourada (*Shimmer*) passa no botão "Iniciar Atendimento". | "Maquiadora Sue — Alta Maquiagem e Penteado para Noivas, Debutantes e Grandes Ocasiões no Rio de Janeiro." | Text Mask Reveal + Shimmer no CTA principal. |
+| **0:08–0:18** | **Navbar Glassmorphism** — Scroll leve para baixo. Mostre a barra superior reduzindo de tamanho com fundo de vidro fosco (`blur 16px`). Mostre o botão EN/PT. | "Navegação premium com efeito glassmorphism e versão internacional para Destination Weddings." | Transição suave da navbar e seletor de idioma. |
+| **0:18–0:28** | **A Profissional & Credenciais** — Scroll até a seção Sobre. Cards de autoridade surgem em cascata (*Stagger Reveal*). Pause nos marcos (Fox Sports e MUFE NY). | "Mais de 10 anos de experiência. 5 anos na equipe de caracterização do Fox Sports e formação internacional Make Up For Ever em Nova York." | Selos de autoridade com efeito de hover suave. |
+| **0:28–0:40** | **A Experiência & Especialidades** — Mostre a linha do tempo (01 Reunião, 02 Prévia, 03 Grande Dia) e os 5 pilares de serviços. | "Atendimento exclusivo com foco em tranquilidade: reunião de alinhamento, prévia de beleza e dedicação integral no grande dia." | Revelação sequencial dos cards. |
+| **0:40–0:58** | **Galeria, Zoom Suave & Barra de Progresso** — Scroll até o portfólio. Passe o mouse nas fotos (observe o zoom cinematográfico de 1.2s sem cortes). Arraste o carrossel e mostre a **barra dourada de progresso** preenchendo. Abra o Lightbox. | "Portfólio interativo de alta definição com zoom cinematográfico, filtros por especialidade e navegação fluida." | Zoom suave `scale(1.05)` a `scale(1.11)` + Barra de progresso dourada. |
+| **0:58–1:10** | **Depoimentos (Estilo Convite de Casamento)** — Mostre os cards de depoimentos. Passe o mouse para ver a linha dourada superior expandindo e a elevação tátil. | "Prova social com design de convite de casamento: avaliações reais de clientes 5 estrelas no Google." | Linha dourada expansiva + microinteração de convite. |
+| **1:10–1:20** | **FAQ & WhatsApp Flutuante** — Clique em uma pergunta frequente (expansão suave). Mostre o botão pulsante de WhatsApp com tooltip. | "Dúvidas frequentes com acordeão interativo e canais diretos de atendimento via WhatsApp." | Acordeão fluido + CTA com feedback tátil. |
+| **1:20–1:35** | **Showcase Biosite (Instagram/TikTok)** — Abra o `demo.html` ou mostre o `biosite.html` no formato mobile. Mostre a foto de perfil com zoom e os links com shimmer. | "E para as redes sociais, um Biosite exclusivo e responsivo que substitui ferramentas genéricas e maximiza conversões no Instagram." | Biosite com botão em destaque e links táteis. |
 
 ---
 
@@ -38,21 +36,19 @@
 
 > "Maquiadora Sue — Alta Maquiagem e Penteado para Noivas, Debutantes e Grandes Ocasiões no Rio de Janeiro.
 >
-> Navegação limpa, responsiva. No mobile, menu hambúrguer com animação suave.
+> Navegação premium com efeito glassmorphism, carregamento ultrarrápido e versão internacional para Destination Weddings.
 >
-> Mais de 10 anos de experiência. 5 anos na equipe de caracterização do Fox Sports. Formação Make Up For Ever em Nova York.
+> Mais de 10 anos de experiência. Cinco anos na equipe de caracterização oficial da Fox Sports e formação de prestígio na Make Up For Ever em Nova York.
 >
-> Processo em 3 etapas: Planejamento, Prévia de Beleza, e o Grande Dia — com assessoria completa.
+> Uma jornada pensada para o seu bem-estar: reunião de alinhamento, prévia de beleza milimétrica e exclusividade total de apenas uma noiva por dia.
 >
-> Três especialidades: Noivas com pacotes exclusivos, Debutantes com troca de looks, e Produção Social para madrinhas e convidadas.
+> Portfólio interativo de alta definição com zoom cinematográfico, filtros dinâmicos e galeria fluida com barra de progresso.
 >
-> Galeria com lightbox nativo — navegação por setas, teclado, swipe no mobile. Imagens em alta resolução.
+> Prova social com estética de convite de casamento e depoimentos reais verificados.
 >
-> Prova social: noivas e debutantes reais que confiaram no trabalho da Sue.
+> Acordeão de dúvidas frequentes e múltiplos caminhos diretos para o fechamento no WhatsApp.
 >
-> Dois caminhos diretos pro WhatsApp: botão fixo no rodapé e flutuante sempre visível.
->
-> Contato direto: WhatsApp, e-mail, localização. Instagram e TikTok ativos.
+> E para o Instagram, um Biosite exclusivo sob medida que potencializa os agendamentos diretamente pela bio.
 >
 > Maquiadora Sue. Sua beleza realçada com sofisticação e exclusividade."
 
