@@ -148,7 +148,17 @@ header.scrolled .nav-wrapper {
   height: 560px; border: 1px solid var(--border-soft); border-radius: var(--radius);
   overflow: hidden; position: relative;
 }
-.credentials-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15); transform-origin: center top; }
+.credentials-image img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center 15%; 
+  transform: scale(1);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.credentials-image:hover img {
+  transform: scale(1.04);
+}
 .credentials-content h2 { font-size: 40px; margin-bottom: 24px; }
 .credentials-content p { font-size: 16px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.8; }
 .signature-quote {
