@@ -6,11 +6,12 @@
   <!-- Página Principal (Português - Brasil) -->
   <url>
     <loc>https://www.maquiadorasue.com/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.maquiadorasue.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maquiadorasue.com/site_maquiadora_sue_en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.maquiadorasue.com/site_maquiadora_sue_es.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maquiadorasue.com/" />
     <image:image>
       <image:loc>https://www.maquiadorasue.com/capa_noiva.webp</image:loc>
@@ -27,18 +28,31 @@
   <!-- Versão em Inglês (International Visitors) -->
   <url>
     <loc>https://www.maquiadorasue.com/site_maquiadora_sue_en.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.maquiadorasue.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maquiadorasue.com/site_maquiadora_sue_en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.maquiadorasue.com/site_maquiadora_sue_es.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maquiadorasue.com/" />
+  </url>
+
+  <!-- Versão em Espanhol (Visitantes da América Latina e Espanha) -->
+  <url>
+    <loc>https://www.maquiadorasue.com/site_maquiadora_sue_es.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.maquiadorasue.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maquiadorasue.com/site_maquiadora_sue_en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.maquiadorasue.com/site_maquiadora_sue_es.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maquiadorasue.com/" />
   </url>
 
   <!-- Biosite / Link na Bio (Instagram & TikTok) -->
   <url>
     <loc>https://www.maquiadorasue.com/biosite.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

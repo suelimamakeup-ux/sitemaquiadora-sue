@@ -1,11 +1,21 @@
 const { chromium } = require('playwright');
 const path = require('path');
+const fs = require('fs');
 
 (async () => {
-  const browser = await chromium.launch({ headless: false });
+  const videoDir = path.join(__dirname, '.temp_video');
+  if (!fs.existsSync(videoDir)) {
+    fs.mkdirSync(videoDir, { recursive: true });
+  }
+
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     viewport: { width: 1920, height: 1080 },
     deviceScaleFactor: 1,
+    recordVideo: {
+      dir: videoDir,
+      size: { width: 1920, height: 1080 }
+    }
   });
   const page = await context.newPage();
 
@@ -158,5 +168,22 @@ const path = require('path');
 
   console.log('Gravação e demonstração concluídas com sucesso!');
 
+  // Salva o caminho do vídeo antes de fechar a página
+  const videoPath = await page.video().path();
+  await page.close();
+  await context.close();
   await browser.close();
+
+  const finalVideoPath = path.join(__dirname, 'demo_maquiadora_sue.mp4');
+  if (fs.existsSync(finalVideoPath)) {
+    try { fs.unlinkSync(finalVideoPath); } catch (e) {}
+  }
+  
+  if (fs.existsSync(videoPath)) {
+    fs.copyFileSync(videoPath, finalVideoPath);
+    console.log(`Novo vídeo de demonstração salvo em: ${finalVideoPath}`);
+    try {
+      fs.rmSync(videoDir, { recursive: true, force: true });
+    } catch (e) {}
+  }
 })();
