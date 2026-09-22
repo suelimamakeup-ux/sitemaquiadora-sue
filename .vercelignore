@@ -1,0 +1,13 @@
+# Vercel Ignore file — Exclui arquivos pesados de desenvolvimento e segurança
+.git/
+.venv/
+docs/
+private/
+*.mp4
+*.bak
+*.tmp
+*.pdf
+*.PDF
+Nova_Foto_Perfil_original.webp
+test_*.png
+*.py
