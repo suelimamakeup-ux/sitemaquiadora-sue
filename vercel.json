@@ -1,10 +1,10 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/site_maquiadora_sue.html" },
-    { "source": "/bio", "destination": "/biosite.html" },
-    { "source": "/en", "destination": "/site_maquiadora_sue_en.html" },
-    { "source": "/es", "destination": "/site_maquiadora_sue_es.html" }
+  "routes": [
+    { "src": "/bio", "dest": "/biosite.html" },
+    { "src": "/en", "dest": "/site_maquiadora_sue_en.html" },
+    { "src": "/es", "dest": "/site_maquiadora_sue_es.html" },
+    { "handle": "filesystem" }
   ],
   "headers": [
     {

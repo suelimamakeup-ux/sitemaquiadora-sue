@@ -42,3 +42,5 @@ _temp_*.js
 
 # Pasta privada — orçamentos fora do deploy
 private/
+
+.vercel
