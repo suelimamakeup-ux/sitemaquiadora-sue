@@ -181,12 +181,18 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="site_maquiadora_sue.html" class="lang-switch" aria-label="Versión en portugués" title="Portugués">
-          <i class="fa-solid fa-globe" aria-hidden="true"></i> PT
-        </a>
-        <a href="site_maquiadora_sue_en.html" class="lang-switch" aria-label="English version" title="English">
-          <i class="fa-solid fa-globe" aria-hidden="true"></i> EN
-        </a>
+        <div class="lang-dropdown">
+          <button class="lang-dropdown-btn" aria-label="Cambiar idioma" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span>ES</span>
+            <i class="fa-solid fa-chevron-down lang-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="lang-dropdown-menu" role="menu">
+            <a href="site_maquiadora_sue.html" class="lang-menu-item" role="menuitem">Português (PT)</a>
+            <a href="site_maquiadora_sue_en.html" class="lang-menu-item" role="menuitem">English (EN)</a>
+            <a href="site_maquiadora_sue_es.html" class="lang-menu-item active" role="menuitem">Español (ES)</a>
+          </div>
+        </div>
         <a href="https://wa.me/5521995421808?text=Hola%20Sue!%20Visité%20tu%20sitio%20web%20y%20me%20gustaría%20solicitar%20un%20presupuesto%20para%20maquillaje%20y%20peinado." target="_blank" rel="noopener noreferrer" class="btn-cta-nav" aria-label="Solicitar presupuesto vía WhatsApp">Presupuesto</a>
       </div>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
@@ -206,10 +212,32 @@
             Iniciar Consulta <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
-        <figure class="hero-image-frame">
-          <img src="capa_noiva.webp" alt="Novia con maquillaje y peinado firmados por Sue Lima" width="600" height="750" loading="eager">
-          <figcaption class="visually-hidden">Novia maquillada por Sue Lima</figcaption>
-        </figure>
+        <div class="hero-image-frame">
+          <div class="hero-slider" aria-label="Galería de destacados">
+            <div class="hero-slide active" data-slide="noiva">
+              <img src="capa_noiva.webp" alt="Producción exclusiva de novia de alta durabilidad por Sue Lima" width="600" height="750" loading="eager">
+            </div>
+            <div class="hero-slide" data-slide="debutante">
+              <img src="debutantes2.webp" alt="Producción sofisticada para quinceañera por Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="social">
+              <img src="portfolio_social.webp" alt="Maquillaje y peinado para eventos sociales por Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="shooting">
+              <img src="seção Shooting 1.webp" alt="Producción editorial de alta definición para sesiones por Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="audiovisual">
+              <img src="audiovisual_4.webp" alt="Caracterización y belleza profesional para audiovisual por Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+          </div>
+          <div class="hero-slider-dots">
+            <button class="hero-slider-dot active" aria-label="Ver diapositiva 1"></button>
+            <button class="hero-slider-dot" aria-label="Ver diapositiva 2"></button>
+            <button class="hero-slider-dot" aria-label="Ver diapositiva 3"></button>
+            <button class="hero-slider-dot" aria-label="Ver diapositiva 4"></button>
+            <button class="hero-slider-dot" aria-label="Ver diapositiva 5"></button>
+          </div>
+        </div>
       </div>
     </section>
 

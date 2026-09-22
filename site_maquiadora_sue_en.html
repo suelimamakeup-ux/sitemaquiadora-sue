@@ -197,12 +197,18 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="site_maquiadora_sue.html" class="lang-switch" aria-label="Versão em português" title="Português">
-          <i class="fa-solid fa-globe" aria-hidden="true"></i> PT
-        </a>
-        <a href="site_maquiadora_sue_es.html" class="lang-switch" aria-label="Versión en español" title="Español">
-          <i class="fa-solid fa-globe" aria-hidden="true"></i> ES
-        </a>
+        <div class="lang-dropdown">
+          <button class="lang-dropdown-btn" aria-label="Change language" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span>EN</span>
+            <i class="fa-solid fa-chevron-down lang-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="lang-dropdown-menu" role="menu">
+            <a href="site_maquiadora_sue.html" class="lang-menu-item" role="menuitem">Português (PT)</a>
+            <a href="site_maquiadora_sue_en.html" class="lang-menu-item active" role="menuitem">English (EN)</a>
+            <a href="site_maquiadora_sue_es.html" class="lang-menu-item" role="menuitem">Español (ES)</a>
+          </div>
+        </div>
         <a href="https://wa.me/5521995421808?text=Hello%20Sue!%20I%20visited%20your%20website%20and%20would%20like%20to%20request%20an%20inquiry%20for%20makeup%20and%20hair." target="_blank" rel="noopener noreferrer" class="btn-cta-nav" aria-label="Request inquiry via WhatsApp">Inquiry</a>
       </div>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
@@ -218,14 +224,36 @@
           <span class="hero-tagline"><i class="fa-solid fa-star" aria-hidden="true"></i> Premium Beauty</span>
           <h1 id="hero-title">Your beauty enhanced with sophistication and exclusivity.</h1>
           <p>Long-lasting makeup and hairstyling for <strong>brides</strong>, <strong>debutantes</strong>, <strong>shootings</strong>, <strong>social productions</strong> and <strong>audiovisual</strong> worldwide. A bespoke beauty experience tailored for your big day.</p>
-          <a href="https://wa.me/5521995421808?text=Hello%20Sue!%20I%20visited%20your%20site%20and%20would%20like%20to%20start%20a%20consultation%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn btn--gold btn-luxury-cta" aria-label="Start consultation via WhatsApp">
-            Start Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          <a href="https://wa.me/5521995421808?text=Hello%20Sue!%20I%20visited%20your%20site%20and%20would%20like%20to%20start%20your%20service%20for%20makeup%20and%20hair." target="_blank" rel="noopener noreferrer" class="btn btn--gold btn-luxury-cta" aria-label="Start your service via WhatsApp">
+            Start Your Service <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
-        <figure class="hero-image-frame">
-          <img src="capa_noiva.webp" alt="Bride with makeup and hair signed by Sue Lima" width="600" height="750" loading="eager">
-          <figcaption class="visually-hidden">Bride made up by Sue Lima</figcaption>
-        </figure>
+        <div class="hero-image-frame">
+          <div class="hero-slider" aria-label="Highlights Gallery">
+            <div class="hero-slide active" data-slide="noiva">
+              <img src="capa_noiva.webp" alt="Exclusive long-lasting bridal beauty by Sue Lima" width="600" height="750" loading="eager">
+            </div>
+            <div class="hero-slide" data-slide="debutante">
+              <img src="debutantes2.webp" alt="Sophisticated debutante makeup and hair by Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="social">
+              <img src="portfolio_social.webp" alt="Glamorous social and event makeup by Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="shooting">
+              <img src="seção Shooting 1.webp" alt="High-definition fashion shooting beauty by Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+            <div class="hero-slide" data-slide="audiovisual">
+              <img src="audiovisual_4.webp" alt="Professional makeup and styling for TV and audiovisual by Sue Lima" width="600" height="750" loading="lazy">
+            </div>
+          </div>
+          <div class="hero-slider-dots">
+            <button class="hero-slider-dot active" aria-label="View slide 1"></button>
+            <button class="hero-slider-dot" aria-label="View slide 2"></button>
+            <button class="hero-slider-dot" aria-label="View slide 3"></button>
+            <button class="hero-slider-dot" aria-label="View slide 4"></button>
+            <button class="hero-slider-dot" aria-label="View slide 5"></button>
+          </div>
+        </div>
       </div>
     </section>
 
