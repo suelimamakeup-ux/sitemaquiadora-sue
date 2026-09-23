@@ -309,18 +309,18 @@ header.scrolled .nav-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 58%;
   height: 100%;
   object-fit: cover;
-  object-position: 25% top;
-  opacity: 0.95;
+  object-position: left top;
+  opacity: 0.98;
   filter: contrast(1.05) saturate(1.02);
   z-index: 1;
 }
 .credentials-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.5) 30%, rgba(253,251,249,0.7) 65%, rgba(253,251,249,0.95) 100%);
+  background: linear-gradient(90deg, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.2) 32%, rgba(253,251,249,0.75) 52%, rgba(253,251,249,0.96) 72%, #FDFBF9 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -329,17 +329,18 @@ header.scrolled .nav-wrapper {
   z-index: 3;
   display: flex;
   justify-content: flex-end;
+  max-width: 1260px;
 }
 .credentials-card {
   width: 100%;
-  max-width: 680px;
+  max-width: 620px;
   background: rgba(253, 251, 249, 0.60);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(212, 175, 55, 0.45);
   border-radius: 12px;
-  padding: 48px 44px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  padding: 44px 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.20);
   position: relative;
 }
 .credentials-card::before {
