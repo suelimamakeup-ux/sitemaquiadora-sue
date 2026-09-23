@@ -385,7 +385,7 @@
     }
   });
 
-  document.querySelectorAll('.section-header, .credentials-content, .hero-text, .hero-image-frame, .credentials-image, .faq-item').forEach(el => {
+  document.querySelectorAll('.section-header, .credentials-content, .credentials-card, .credentials-bg, .hero-text, .hero-image-frame, .credentials-image, .faq-item').forEach(el => {
     el.classList.add('reveal');
     revealObserver.observe(el);
   });
