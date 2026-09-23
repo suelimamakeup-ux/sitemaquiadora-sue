@@ -309,10 +309,10 @@ header.scrolled .nav-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 55%;
+  width: 50%;
   height: 100%;
   object-fit: cover;
-  object-position: -40px top;
+  object-position: -100px top;
   opacity: 1;
   filter: contrast(1.04) saturate(1.02);
   z-index: 1;
@@ -320,7 +320,7 @@ header.scrolled .nav-wrapper {
 .credentials-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(26,26,26,0) 0%, rgba(26,26,26,0) 28%, rgba(253,251,249,0.7) 48%, #FDFBF9 70%, #FDFBF9 100%);
+  background: linear-gradient(90deg, rgba(26,26,26,0) 0%, rgba(26,26,26,0) 22%, rgba(253,251,249,0.7) 42%, #FDFBF9 64%, #FDFBF9 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -329,11 +329,11 @@ header.scrolled .nav-wrapper {
   z-index: 3;
   display: flex;
   justify-content: flex-end;
-  max-width: 1280px;
+  max-width: 1320px;
 }
 .credentials-card {
   width: 100%;
-  max-width: 590px;
+  max-width: 560px;
   background: rgba(253, 251, 249, 0.60);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -995,6 +995,17 @@ footer { background-color: #141414; color: #888888; padding: 80px 0 40px 0; font
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .credentials-bg {
+    width: 48%;
+    object-position: -50px top;
+  }
+  .credentials-card {
+    max-width: 530px;
+    padding: 38px 30px;
+  }
+}
+
 @media (max-width: 1120px) {
   .nav-menu { gap: 14px; }
   .brand-logo { font-size: 20px; letter-spacing: 2px; }
