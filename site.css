@@ -309,18 +309,18 @@ header.scrolled .nav-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 58%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  opacity: 0.92;
+  object-position: 25% top;
+  opacity: 0.95;
   filter: contrast(1.05) saturate(1.02);
   z-index: 1;
 }
 .credentials-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(26,26,26,0.15) 0%, rgba(26,26,26,0.55) 42%, #FDFBF9 68%, #FDFBF9 100%);
+  background: linear-gradient(90deg, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.5) 30%, rgba(253,251,249,0.7) 65%, rgba(253,251,249,0.95) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -332,14 +332,14 @@ header.scrolled .nav-wrapper {
 }
 .credentials-card {
   width: 100%;
-  max-width: 660px;
-  background: rgba(253, 251, 249, 0.96);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: 10px;
+  max-width: 680px;
+  background: rgba(253, 251, 249, 0.60);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 12px;
   padding: 48px 44px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
   position: relative;
 }
 .credentials-card::before {
@@ -355,11 +355,13 @@ header.scrolled .nav-wrapper {
   font-size: 38px; 
   margin-bottom: 20px; 
   color: var(--text-dark);
+  font-weight: 500;
   line-height: 1.2;
 }
 .credentials-card p { 
   font-size: 15.5px; 
-  color: #383838; 
+  color: #1A1A1A; 
+  font-weight: 500;
   margin-bottom: 18px; 
   line-height: 1.75; 
 }
@@ -367,11 +369,16 @@ header.scrolled .nav-wrapper {
   font-family: 'Playfair Display', serif; 
   font-style: italic; 
   font-size: 20px;
-  color: var(--gold-text); 
+  color: #6E4F18; 
+  font-weight: 500;
   margin: 26px 0; 
-  border-left: 2.5px solid var(--gold-accent);
+  border-left: 3px solid var(--gold-accent);
   padding-left: 20px; 
   line-height: 1.55;
+  background: rgba(253, 251, 249, 0.45);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0 6px 6px 0;
 }
 .signature-quote .quote-author {
   display: block;
@@ -393,8 +400,10 @@ header.scrolled .nav-wrapper {
   margin-top: 28px;
 }
 .badge-item {
-  background: var(--white);
-  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: var(--radius);
   padding: 14px 18px;
   display: flex;
