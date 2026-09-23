@@ -1092,6 +1092,21 @@ footer { background-color: #141414; color: #888888; padding: 80px 0 40px 0; font
   .hero-text h1 { font-size: 32px; }
   .action-banner h2 { font-size: 32px; }
   .action-banner { padding: 80px 0; }
+  .credentials-card {
+    padding: 30px 20px;
+  }
+  .credentials-card h2 {
+    font-size: 30px;
+  }
+  .signature-quote {
+    font-size: 17px;
+    padding-left: 14px;
+    margin: 20px 0;
+  }
+  .credentials-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
   .whatsapp-float { bottom: 16px; right: 16px; width: 50px; height: 50px; font-size: 22px; }
   .whatsapp-tooltip { display: none; }
   .lightbox-close, .lightbox-prev, .lightbox-next { font-size: 32px; padding: 12px; }
@@ -1103,5 +1118,13 @@ footer { background-color: #141414; color: #888888; padding: 80px 0 40px 0; font
 @media (max-width: 480px) {
   .brand-logo { font-size: 18px; letter-spacing: 1.5px; }
   .btn-cta-nav { padding: 8px 14px; font-size: 10px; }
-  .hero-text h1 { font-size: 28px; }
+  .hero-text h1 { font-size: 26px; line-height: 1.25; }
+  .hero-text p { font-size: 14px; }
+  .credentials-section { padding: 50px 0; }
+  .credentials-card { padding: 24px 16px; border-radius: 8px; }
+  .credentials-card h2 { font-size: 26px; }
+  .signature-quote { font-size: 16px; }
+  .badge-item { padding: 12px 14px; }
+  .btn-luxury-cta { padding: 16px 28px; width: 100%; justify-content: center; }
+  .portfolio-item { height: 280px; }
 }
