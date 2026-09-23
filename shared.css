@@ -26,6 +26,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 16px;
   background-color: var(--bg-luxury);
   color: var(--text-dark);
   line-height: 1.8;
@@ -67,7 +68,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: 'Lato', sans-serif;
   font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
-  font-size: 11px; padding: 16px 32px; border: none; cursor: pointer;
+  font-size: 13px; padding: 16px 32px; border: none; cursor: pointer;
   transition: all var(--transition); border-radius: var(--radius);
   position: relative;
   overflow: hidden;
@@ -127,7 +128,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .btn--outline {
   background: transparent; color: var(--text-dark); border-bottom: 1px solid var(--text-dark);
-  padding: 0 0 4px; font-size: 11px;
+  padding: 0 0 4px; font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -141,8 +142,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Section Header */
 .section-header { margin-bottom: 60px; }
-.section-header h2 { font-size: 40px; margin-bottom: 12px; }
-.section-header p { font-size: 16px; color: var(--text-muted); font-weight: 300; }
+.section-header h2 { font-size: 42px; margin-bottom: 12px; }
+.section-header p { font-size: 18px; color: var(--text-muted); font-weight: 300; }
 
 /* Grid Utilities */
 .grid { display: grid; gap: 30px; }
@@ -151,7 +152,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 992px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 40px; }
-  .section-header h2 { font-size: 32px; }
+  .section-header h2 { font-size: 34px; }
   .section-header { margin-bottom: 40px; }
 }
 
