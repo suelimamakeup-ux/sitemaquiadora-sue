@@ -324,9 +324,20 @@ header.scrolled .nav-wrapper {
 .credentials-content h2 { font-size: 40px; margin-bottom: 24px; }
 .credentials-content p { font-size: 16px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.8; }
 .signature-quote {
-  font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px;
-  color: var(--gold-text); margin: 28px 0; border-left: 2px solid var(--gold-accent);
-  padding-left: 24px; line-height: 1.5;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 21px;
+  color: var(--gold-text); margin: 32px 0; border-left: 2.5px solid var(--gold-accent);
+  padding-left: 24px; line-height: 1.6;
+}
+.signature-quote .quote-author {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-accent);
+  margin-top: 10px;
 }
 
 /* Credentials Badges */
