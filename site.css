@@ -309,18 +309,18 @@ header.scrolled .nav-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 58%;
+  width: 55%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
-  opacity: 0.98;
-  filter: contrast(1.05) saturate(1.02);
+  object-position: -40px top;
+  opacity: 1;
+  filter: contrast(1.04) saturate(1.02);
   z-index: 1;
 }
 .credentials-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.2) 32%, rgba(253,251,249,0.75) 52%, rgba(253,251,249,0.96) 72%, #FDFBF9 100%);
+  background: linear-gradient(90deg, rgba(26,26,26,0) 0%, rgba(26,26,26,0) 28%, rgba(253,251,249,0.7) 48%, #FDFBF9 70%, #FDFBF9 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -329,18 +329,18 @@ header.scrolled .nav-wrapper {
   z-index: 3;
   display: flex;
   justify-content: flex-end;
-  max-width: 1260px;
+  max-width: 1280px;
 }
 .credentials-card {
   width: 100%;
-  max-width: 620px;
+  max-width: 590px;
   background: rgba(253, 251, 249, 0.60);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(212, 175, 55, 0.45);
   border-radius: 12px;
-  padding: 44px 40px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.20);
+  padding: 44px 38px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
   position: relative;
 }
 .credentials-card::before {
@@ -1012,15 +1012,17 @@ footer { background-color: #141414; color: #888888; padding: 80px 0 40px 0; font
     margin: 0 auto;
   }
   .credentials-section {
-    padding: 60px 0;
+    padding: 70px 0;
   }
   .credentials-bg {
     width: 100%;
-    opacity: 0.28;
+    height: 100%;
+    object-position: center top;
+    opacity: 0.35;
   }
   .credentials-overlay {
-    background: #FDFBF9;
-    opacity: 0.88;
+    background: linear-gradient(180deg, rgba(253,251,249,0.7) 0%, rgba(253,251,249,0.92) 100%);
+    opacity: 1;
   }
   .credentials-container {
     justify-content: center;
@@ -1028,6 +1030,7 @@ footer { background-color: #141414; color: #888888; padding: 80px 0 40px 0; font
   .credentials-card {
     padding: 36px 24px;
     max-width: 100%;
+    background: rgba(253, 251, 249, 0.75);
   }
   .credentials-badges { grid-template-columns: 1fr; }
   .faq-question { padding: 20px 24px; font-size: 16px; }
